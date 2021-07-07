@@ -1,3 +1,5 @@
+import { compose, pipe } from "lodash/fp";
+
 const sayHello = () => {
     return 'Hello World!'
 }
