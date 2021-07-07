@@ -4,10 +4,12 @@ const sayHello = () => {
     return 'Hello World!'
 }
 
-let fn = sayHello;
+let input = '    Javascript    ';
 
-const greet = (fnMessage) => {
-    console.log(fnMessage());
-}
+const trim = str => str.trim();
+const toLowerCase = str => str.toLowerCase();
+const wrapInDiv = str => `<div>${str}</div>`;
 
-greet(fn);
+const transform = compose(wrapInDiv, toLowerCase, trim);
+transform(input);
+
