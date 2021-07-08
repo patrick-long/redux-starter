@@ -13,3 +13,7 @@ const wrap = type => str => `<${type}>${str}</${type}>`;
 const transform = pipe(trim, toLowerCase, wrap('div'));
 console.log(transform(input));
 
+const person = { name: 'John' };
+const updatedPerson = { ...person, name: 'Bob' };
+
+console.log(updatedPerson);
