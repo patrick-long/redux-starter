@@ -8,8 +8,8 @@ let input = '    Javascript    ';
 
 const trim = str => str.trim();
 const toLowerCase = str => str.toLowerCase();
-const wrap = (type, str) => `<${type}>${str}</${type}>`;
+const wrap = type => str => `<${type}>${str}</${type}>`;
 
-const transform = pipe(trim, toLowerCase, wrapInDiv);
-transform(input);
+const transform = pipe(trim, toLowerCase, wrap('div'));
+console.log(transform(input));
 
