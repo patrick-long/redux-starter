@@ -29,4 +29,11 @@ const updatedPerson = {
     name: 'Bob' 
 };
 updatedPerson.address.city = 'New York'
-console.log(updatedPerson, person);
+
+const numbers = [1, 2, 3];
+
+// Adding
+const index = numbers.indexOf(2);
+const added = [...numbers.slice(0, index), 4, ...numbers.slice(index)]
+
+console.log(added);
