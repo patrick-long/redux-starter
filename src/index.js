@@ -20,6 +20,13 @@ const person = {
         city: 'San Francisco'
     }
 };
-const updatedPerson = { ...person, name: 'Bob' };
+const updatedPerson = { 
+    ...person, 
+    address: {
+        ...person.address,
+        city: 'New York'
+    },
+    name: 'Bob' 
+};
 updatedPerson.address.city = 'New York'
 console.log(updatedPerson, person);
