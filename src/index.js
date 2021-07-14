@@ -38,10 +38,18 @@ const added = [...numbers.slice(0, index), 4, ...numbers.slice(index)];
 
 // Removing 
 const removed = numbers.filter(n => n !== 2);
-console.log(removed);
+// console.log(removed);
 
 // Updating 
 const updated = numbers.map(n => n === 2 ? 20 : n );
-console.log(updated);
+// console.log(updated);
 
-console.log(added);
+// console.log(added);
+
+
+
+import { Map } from 'immutable';
+
+let book = Map({ title: 'Harry Potter' });
+
+console.log(book.get('title'));
