@@ -52,4 +52,10 @@ import { Map } from 'immutable';
 
 let book = Map({ title: 'Harry Potter' });
 
-console.log(book.get('title'));
+const publishBook = book => {
+    return book.set('isPublished', true);
+};
+
+publishBook(book);
+
+console.log(book.toJS());
