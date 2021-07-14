@@ -11,7 +11,7 @@ const toLowerCase = str => str.toLowerCase();
 const wrap = type => str => `<${type}>${str}</${type}>`;
 
 const transform = pipe(trim, toLowerCase, wrap('div'));
-console.log(transform(input));
+// console.log(transform(input));
 
 const person = { 
     name: 'John',
@@ -56,6 +56,6 @@ const publishBook = book => {
     return book.set('isPublished', true);
 };
 
-publishBook(book);
+book = publishBook(book);
 
 console.log(book.toJS());
