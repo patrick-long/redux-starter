@@ -59,6 +59,7 @@ const publishBook = book => {
     })
 };
 
-book = publishBook(book);
+let updated = publishBook(book);
 
-console.log(book.toJS());
+console.log(book);
+console.log(updated);
