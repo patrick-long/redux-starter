@@ -49,11 +49,14 @@ const updated = numbers.map(n => n === 2 ? 20 : n );
 
 
 import { Map } from 'immutable';
+import { produce } from 'immer';
 
 let book = Map({ title: 'Harry Potter' });
 
 const publishBook = book => {
-    return book.set('isPublished', true);
+    return produce(book, draftBook => {
+        draftBook.isPublished = true;
+    })
 };
 
 book = publishBook(book);
