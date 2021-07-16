@@ -10,5 +10,7 @@ const reducer = (state, action) => {
                 resolved: false
             }
         ];
-    } 
+    } else if (action.type === 'bugRemoved') {
+        return state.filter(bug => bug.id !== action.payload.id);
+    }
 }
