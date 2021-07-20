@@ -1,6 +1,6 @@
 let lastId = 0;
 
-const reducer = (state, action) => {
+const reducer = (state = [], action) => {
     if (action.type === 'bugAdded') {
         return [
             ...state,
@@ -13,4 +13,6 @@ const reducer = (state, action) => {
     } else if (action.type === 'bugRemoved') {
         return state.filter(bug => bug.id !== action.payload.id);
     }
+
+    return state;
 }
