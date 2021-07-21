@@ -71,6 +71,13 @@ store.dispatch({
     payload: {
         description: "Bug1"
     }
+});
+
+store.dispatch({
+    type: "bugRemoved",
+    payload: {
+        id: 0
+    }
 })
 
 console.log(store.getState());
