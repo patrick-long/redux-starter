@@ -1,43 +1,43 @@
-import { compose, pipe } from "lodash/fp";
+// import { compose, pipe } from "lodash/fp";
 
-const sayHello = () => {
-    return 'Hello World!'
-}
+// const sayHello = () => {
+//     return 'Hello World!'
+// }
 
-let input = '    Javascript    ';
+// let input = '    Javascript    ';
 
-const trim = str => str.trim();
-const toLowerCase = str => str.toLowerCase();
-const wrap = type => str => `<${type}>${str}</${type}>`;
+// const trim = str => str.trim();
+// const toLowerCase = str => str.toLowerCase();
+// const wrap = type => str => `<${type}>${str}</${type}>`;
 
-const transform = pipe(trim, toLowerCase, wrap('div'));
+// const transform = pipe(trim, toLowerCase, wrap('div'));
 // console.log(transform(input));
 
-const person = { 
-    name: 'John',
-    address: {
-        country: 'USA',
-        city: 'San Francisco'
-    }
-};
-const updatedPerson = { 
-    ...person, 
-    address: {
-        ...person.address,
-        city: 'New York'
-    },
-    name: 'Bob' 
-};
-updatedPerson.address.city = 'New York'
+// const person = { 
+//     name: 'John',
+//     address: {
+//         country: 'USA',
+//         city: 'San Francisco'
+//     }
+// };
+// const updatedPerson = { 
+//     ...person, 
+//     address: {
+//         ...person.address,
+//         city: 'New York'
+//     },
+//     name: 'Bob' 
+// };
+// updatedPerson.address.city = 'New York'
 
-const numbers = [1, 2, 3];
+// const numbers = [1, 2, 3];
 
 // Adding
-const index = numbers.indexOf(2);
-const added = [...numbers.slice(0, index), 4, ...numbers.slice(index)];
+// const index = numbers.indexOf(2);
+// const added = [...numbers.slice(0, index), 4, ...numbers.slice(index)];
 
 // Removing 
-const removed = numbers.filter(n => n !== 2);
+// const removed = numbers.filter(n => n !== 2);
 // console.log(removed);
 
 // Updating 
@@ -48,18 +48,20 @@ const removed = numbers.filter(n => n !== 2);
 
 
 
-import { Map } from 'immutable';
-import { produce } from 'immer';
+// import { Map } from 'immutable';
+// import { produce } from 'immer';
 
-let book = Map({ title: 'Harry Potter' });
+// let book = Map({ title: 'Harry Potter' });
 
-const publishBook = book => {
-    return produce(book, draftBook => {
-        draftBook.isPublished = true;
-    })
-};
+// const publishBook = book => {
+//     return produce(book, draftBook => {
+//         draftBook.isPublished = true;
+//     })
+// };
 
-let updated = publishBook(book);
+// let updated = publishBook(book);
 
-console.log(book);
-console.log(updated);
+// console.log(book);
+// console.log(updated);
+
+
