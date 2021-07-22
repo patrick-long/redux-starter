@@ -1,3 +1,5 @@
+import { BUG_ADDED, BUG_REMOVED } from './actionTypes';
+
 let lastId = 0;
 
 const reducer = (state = [], action) => {
