@@ -65,7 +65,7 @@
 // console.log(updated);
 
 import store from './store';
-import { bugAdded } from './actionCreators';
+import { bugAdded, bugRemoved } from './actionCreators';
 
 const unsubscribe = store.subscribe(() => {
     console.log("Store changed!", store.getState());
@@ -75,11 +75,6 @@ store.dispatch(bugAdded("Bug 1"));
 
 unsubscribe();
 
-store.dispatch({
-    type: actions.BUG_REMOVED,
-    payload: {
-        id: 0
-    }
-})
+store.dispatch(bugRemoved(0));
 
 console.log(store.getState());

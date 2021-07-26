@@ -8,3 +8,12 @@ export const bugAdded = description => {
         }
     }
 }
+
+export const bugRemoved = id => {
+    return {
+        type: actions.BUG_REMOVED,
+        payload: {
+            id
+        }
+    }
+}
