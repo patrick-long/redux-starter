@@ -3,7 +3,7 @@ import * as actions from './actionTypes';
 let lastId = 0;
 
 const reducer = (state = [], action) => {
-    if (action.type === actions.BUG_ADDED ) {
+    if ( action.type === actions.BUG_ADDED ) {
         return [
             ...state,
             {
@@ -12,8 +12,10 @@ const reducer = (state = [], action) => {
                 resolved: false
             }
         ];
-    } else if (action.type === actions.BUG_REMOVED ) {
+    } else if ( action.type === actions.BUG_REMOVED ) {
         return state.filter(bug => bug.id !== action.payload.id);
+    } else if ( action.type === actions.BUG_RESOLVED ) {
+        return state.map(bug => bug.id !== action.payload.id ? bug : {...bug, resolved: true} );
     }
 
     return state;
