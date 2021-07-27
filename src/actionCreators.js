@@ -17,3 +17,12 @@ export const bugRemoved = id => {
         }
     }
 }
+
+export const bugResolved = id => {
+    return {
+        type: actions.BUG_RESOLVED,
+        payload: {
+            id
+        }
+    }
+}
